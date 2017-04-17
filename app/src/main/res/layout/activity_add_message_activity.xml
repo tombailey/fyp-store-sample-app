@@ -5,27 +5,40 @@
     android:layout_height="match_parent">
 
     <ProgressBar
-        android:id="@+id/activity_main_progress_bar"
+        android:id="@+id/activity_add_message_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/activity_main_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:visibility="gone"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/activity_main_floating_action_button_add"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/activity_add_message_linear_layout_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_add_white_24dp"/>
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_message_activity_prompt"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/activity_add_message_edit_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/activity_add_message_button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"/>
+
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/activity_main_linear_layout_error"
+        android:id="@+id/activity_add_message_linear_layout_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -40,7 +53,7 @@
             android:textSize="64sp"/>
 
         <TextView
-            android:id="@+id/activity_main_text_view_error_description"
+            android:id="@+id/activity_add_message_text_view_error_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -48,7 +61,7 @@
             android:textSize="16sp"/>
 
         <Button
-            android:id="@+id/activity_main_button_error_retry"
+            android:id="@+id/activity_add_message_button_error_retry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -56,6 +69,5 @@
             android:text="@string/retry"/>
 
     </LinearLayout>
-
 
 </FrameLayout>
